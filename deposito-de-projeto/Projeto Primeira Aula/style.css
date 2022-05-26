@@ -1,0 +1,70 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #FFFACD;
+	border-style: none;
+	font-display: initial;
+	border-color: black;
+	
+}
+
+header {
+	background: #FFFACD;
+	padding: 20px 0;
+	border-style: none;
+}
+
+
+
+.input-padrao {
+	display: inline-flex;
+	margin: 0 0 20; ;
+	padding: 5px 25px;
+	width: 10%;
+
+}
+
+
+
+h1 {
+		text-align: center;
+		border-style: solid;
+		background: yellow;
+
+	}
+
+	h2{
+text-align: center;
+		border-style: solid;
+		background: 	#FF0000;
+	}
+
+
+	h3{
+text-align: center;
+		border-style: solid;
+		background:#FF0000;
+}
+
+	div{
+
+		border:solid;
+		border-width: 1px;
+		border-color: #000000;
+
+
+
+	}
+
+	p{
+
+margin: 0 10 0;
+	}
+
+	label{
+
+		display: inline-flex;
+	}
+
+	table {
+
+	}

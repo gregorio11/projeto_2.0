@@ -1,63 +1,205 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Projeto IC Paranoa</title>
 
-        <title>Datawake</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body text="black">
+		<header>
+			<div class="caixa">
+				<h1 style="border: groove;">Proposta/Requisição</h1> 	
+					<h1 style="border: groove;">Admissão/Férias/Recisão</h1> 
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+				<nav>
+					<ul>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
-	        <link rel="icon" type="image/png" href="images/bateria.png">
-	        <link rel="stylesheet" href="css/reset.css">
-	        <link rel="stylesheet" href="css/estilos.css">
+		<main>
+			
 
-    </head>
-    <body>
+					<div>			
+<em><h1>DADOS PESSOAIS(PREENCHIMENTO OBRIGATÓRIO EM CASO DE FÉRIAS E/OU DESLIGAMENTO)</h1></em>
+				<label for="nomesobrenome">Nome e sobrenome</label>
+				<input type="text" id="nomesobrenome" class="input-padrao" required>
 
-        <h1>Formulário</h1>
+				<label for="cargo">Cargo</label>
+				<input type="text" id="cargo" class="input-padrao" required>
 
-        <main>
-			<form name="formCadastro" onsubmit="return validarFormulario()" method="post">
+				<p><label for="salario">Salario Atual</label>
+				<input type="text" id="salario" class="input-padrao" required>
+
+
+				<label for="registro">Registro Crachá</label>
+				<input type="text" id="cracha" class="input-padrao" required>
+
+
+				<p><label for="salario">Salario Atual</label>
+				<input type="text" id="salario" class="input-padrao" required>
+
+				<label for="setor">Depto/Setor</label>
+				<input type="text" id="setor" class="input-padrao" required>
+
+				<p><label for="admissao">Data Admisão</label>
+				<input type="text" id="admissao" class="input-padrao" required>
+					</div>
+
+
 				
-                <label for="nomeSobrenome">Nome e Sobrenome</label>
-				<input type="text" id="nomeSobrenome" class="input-padrao" required>
+				<div>
+					<legend><h2 style="border-color: blueviolet;">USO EXCLUSIVO EM CASO DE FÉRIAS</h2></legend>
 
-                <label for="setor">Setor</label>
-                <select id="setor" class="input-padrao" ></select>
+					<p><label for="ferias">Inicio das Férias</label>
+					<input type="text" id="ferias" class="input-padrao" required>
+
+					<p><label for="radio-email"><input type="radio" name="contato" value="email" id="radio-30dias">30 dias em descanso</label>
+					
+					<p><label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-20dias">20 dias em descanso + 10 remunerado</label>
+					
+					<p><label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-13sal" checked>Opção pelo 13' Salário</label></select>
+
+				</div>
+				
+				<div>
+				<legend><h1>USO EXCLUSIVO EM CASO DE DESLIGAMENTO</h3></legend>
+
+					<p><label for="radio-email"><input type="radio" name="2" value="email" id="radio-demissao">Demissão</label>
+					
+					<p><label for="radio-telefone"><input type="radio" name="2" value="telefone" id="radio-reprova">Reprova de Experiência</label>
+					
+					<p><label for="radio-whatsapp"><input type="radio" name="2" value="whatsapp" id="radio-demissionario" checked>Demissionário</label>
 
 
-                <label>Áreas envolvidas para o desenvolvimento</label>
-                <label><input type="checkbox">Financeiro</label>
-				<label><input type="checkbox">Compras</label>
+					<p><label for="radio-telefone"><input type="radio" name="2" value="telefone" id="radio-outros">Outros</label>
 
-                <br>
+						<p><label for="nomesobrenome">Justificativa/Motivo Alegado</label>
+				<input type="text" id="Justifica" class="input-padrao" required>
 
-                <label for="tituloProjeto">Título do Projeto</label>
-				<input type="text" id="tituloProjeto" class="input-padrao" >
 
-                <label for="prazoFinal">Prazo Final</label>
-				<input type="date" id="prazoFinal" class="input-padrao" >
+				<label for="datadesl">DATA DESLIGAMENTO</label>
+				<input type="date" name="desligamento" class="input-padrao">
 
-                <input type="submit" value="Enviar formulário" class="enviar">
-				<script>
-				    function validarFormulario(){
-				        var nomePessoa = document.forms["formCadastro"]["nomeSobrenome"].value;
-				        if (nomePessoa == "") {
-				            alert("Favor informar o seu nome!");
-				            return false;     
-				        }
-				        else{
-				            alert("Olá, " + nomePessoa + " !" + "\nSeu Formulário Foi Cadastrado com Sucesso!" );
-				            return true;
-				        }
-				    }
-				</script>
-            </form>
-        </main>
-        <script src="main.js"></script>
-    </body>
+					<p>OBS:Em caso de dispensa com substituição, por favor preencher os itens abaixo</p>
+
+					</div>
+
+					<div>
+						<legend><h1>USO EXCLUSIVO EM CASO DE ADMISSÂO
+
+							<h3><p>EM CASO DE APROVEITAMENTO INTERNO, FAZ-SE NECESSÁRIO O PREENCHIMENTO DO IMPRESSO PROPOSTA DE ALTERAÇÃO PELA ÁREA REQUISITANTE</p><h3>
+						</h1></legend>	
+
+
+				<label for="cargo">Cargo:</label>
+				<input type="text" id="cargo" class="input-padrao" required>
+
+				<label for="setor">Depto/Setor:</label>
+				<input type="text" id="setor" class="input-padrao" required>
+
+				<p>Tipo de Contrato:</p>
+					<label for="radio-email"><input type="radio" name="1" value="email" id="radio-1">Efetivo</label>
+					<p><label for="radio-email"><input type="radio" name="1" value="email" id="radio-1">Terceirizado</label>
+					<p><label for="radio-email"><input type="radio" name="1" value="email" id="radio-1">Estagiário</label>
+					<p><label for="radio-email"><input type="radio" name="1" value="email" id="radio-1">Temporário</label>	
+
+					<p>Motivo:</p>
+
+					<p><label for="radio-email"><input type="radio" name="2" value="email" id="radio-2">Licença Maternidade</label>
+					<p><label for="radio-email"><input type="radio" name="2" value="email" id="radio-2">Aumento de Quadro</label>
+					<p><label for="radio-email"><input type="radio" name="2" value="email" id="radio-2">Efetivação</label>
+					<p><label for="radio-email"><input type="radio" name="2" value="email" id="radio-2">Substituição</label>
+
+						<p><label for="cargo">Requisitos Desejáveis para Contratação:</label>
+				<input type="text" id="cargo" class="input-padrao" required>
+					</div>	
+
+					<div>
+						<p><em>Uso exclusivo do Dpto de Recursos Humanos</em></p>
+
+						<label for="candidato">Candidato Aprovado:</label>
+				<input type="text" id="candidato" class="input-padrao" required>
+
+				<label for="candidato">Registro/Chapa:</label>
+				<input type="text" id="candidato" class="input-padrao" required>
+
+
+				<label for="cargo">Cargo:</label>
+				<input type="text" id="cargo" class="input-padrao" required>
+
+				<p><label for="r$">Salário R$:</label>
+				<input type="text" id="salario$" class="input-padrao" required>
+
+				<label for="datadesl">Hora</label>
+				<input type="time" name="desligamento" class="date">
+
+				<label for="datadesl">Mês</label>
+				<input type="month" name="desligamento" class="date">
+
+				<label for="datadesl">Data Admissão</label>
+				<input type="date" name="desligamento" class="date">
+
+					<p><label for="depto/setor">Depto/Setor:</label>
+				<input type="text" name="desligamento" class="input-padrao">
+
+
+				<p><label for="depto/setor">Centro Custo:</label>
+				<input type="text" name="desligamento" class="input-padrao">
+
+				<label for="datadesl">Horário de Trabalho:</label>
+				<input type="time" name="desligamento" class="date">
+
+				<p><label for="cargo">Observações:</label>
+				<input type="text" id="cargo" class="input-padrao" required>
+
+				<p><em>Uso exclusivo do Dpto de Recursos Humanos:</em></p>
+
+				<label for="radio-email"><input type="radio" name="sim" value="email" id="radio-Sim">Sim</label>
+				<label for="radio-email"><input type="radio" name="sim" value="email" id="radio-Não">Não</label>
+						
+					</div>
+
+			<div>
+				
+			<h2><p>OBS:NENHUMA CONTRATAÇÃO SERÁ OFICIALIZADA, SEM AS DEVIDAS APROVAÇÕES</p></h2>
+
+			</div>
+
+
+			<div>
+
+
+<div>			
+<p>Area Requisitante:																				
+<p><label for="datadesl">Data</label>
+<input type="date" name="requisi" class="input-padrao">
+</div>	
+
+
+
+<div>
+<p>Diretoria:
+<h5><label for="datadesl">Data:</label>
+<input type="date" name="diret" class="input-padrao">
+</div>
+
+
+<div>
+<p>Recursos Humanos:
+<h5><label for="datadesl">Data:</label>
+<input type="date" name="rec" class="input-padrao">
+</div>
+
+			</div>		
+
+			<table>
+			
+		</main>
+
+		
+	</body>
 </html>
